@@ -4,7 +4,7 @@
 - EC2 Image Builder is a wholly managed AWS service that simplifies the process to automate the creation, management, and deployment of tailored, secure, and up-to-date server images that are pre-installed and pre-configured with software and settings to match specific IT standards.
 - Features of EC2 Image Builder
 
-   - Greater productivity and reduced operations for building compliant and up-to-date images/ec2
+   - Greater productivity and reduced operations for building compliant and up-to-date images
    - The more excellent service uptime
    - Improved the security standard for deployments
    - Centralized enforcement and lineage tracking
@@ -75,7 +75,7 @@
 
         <img src="images/ec2/image8.png" class="inline" width="700" height="150"/>
 
-     - Choose the image to configure from a list of previously created pipeline images/ec2, images shared with you, or a quick start list to help you get started. You could also enter a custom AMI ID to define the base image. Under Image origin, select Quickstart (Amazon-managed).
+     - Choose the image to configure from a list of previously created pipeline images, images shared with you, or a quick start list to help you get started. You could also enter a custom AMI ID to define the base image. Under Image origin, select Quickstart (Amazon-managed).
 
         <img src="images/ec2/image9.png" class="inline" width="700" height="250"/>
 
