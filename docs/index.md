@@ -99,19 +99,21 @@
     
   - Keep the default for Working directory options (Use /tmp as Working directory path).
     
-    <img src="images/image15.png" class="inline" width="700" height="200"/> 
+    <img src="images/image15.png" class="inline" width="700" height="150"/> 
  
   - In the Components section, you must choose at least one build component. Under Build components – Amazon Linux panel, you can browse through the components listed on the page. For this tutorial, choose a component that updates Linux with the latest security updates, as follows:
 
     - Filter the results by entering the word update in the search bar that's located at the top of the panel.
 
     - Select the check box for the update-linux build component.
+    
+       <img src="images/image16.png" class="inline" width="700" height="350"/>
 
     - Scroll down, and in the upper right corner of the Selected components list, choose Expand all .
 
     - Keep the default for Versioning options (Use latest available component version).
    
-      <img src="images/image16.png" class="inline" width="700" height="400"/> 
+       <img src="images/image18.png" class="inline" width="700" height="200"/>
    
  - Choose Next to proceed to the next step.
 
@@ -121,15 +123,23 @@
 
   - In the Infrastructure configuration section, the Configuration options default to Create infrastructure configuration using service defaults. This creates an IAM role and associated instance profile that are used by build instances to configure your EC2 AMIs. You can also create your own custom infrastructure configuration, or use settings that you have already created. For this tutorial, we are using the default settings.
 
+    <img src="images/image19.png" class="inline" width="700" height="350"/>
+
   - Choose Next to proceed to the next step.
+   
+    <img src="images/image20.png" class="inline" width="700" height="225"/>
 
   **Step 4: Define distribution settings - optional**
   
   - Distribution settings include specific Region settings for encryption, launch permissions, accounts that can launch the output AMI, the output AMI name, and license configurations.
 
   - In the Distribution settings section, the Configuration options default to Create distribution settings using service defaults. This option will distribute the output AMI to the current Region. For this tutorial, we are using the default settings.
+  
+    <img src="images/image21.png" class="inline" width="700" height="150"/>
 
   - Choose Next to proceed to the next step.
+
+    <img src="images/image22.png" class="inline" width="700" height="175"/>
 
   **Step 5: Review**
   
@@ -137,7 +147,13 @@
 
   - When you have reviewed your settings, choose Create pipeline to create your pipeline.
 
+    <img src="images/image23.png" class="inline" width="700" height="200"/>
+
   - You can see success or failure messages at the top of the page, as your resources are created for distribution settings, infrastructure configuration, your new recipe, and the pipeline. To see details for a resource, including the resource identifier, choose View details.
+  
+    <img src="images/image24.png" class="inline" width="700" height="175"/>
+    
+    <img src="images/image25.png" class="inline" width="700" height="175"/>
 
   **Step 6: Clean up**
   
