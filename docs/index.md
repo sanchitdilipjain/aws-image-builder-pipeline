@@ -1,63 +1,63 @@
 ## Create an image pipeline using the EC2 Image Builder console
 
 **Introduction**
-- EC2 Image Builder is a fully managed AWS service that makes it easier to automate the creation, management, and deployment of customized, secure, and up-to-date server images that are pre-installed and pre-configured with software and settings to meet specific IT standards.
+- EC2 Image Builder is a completely managed AWS service that simplify the process to automate the creation, management, and deployment of tailored, secure, and up-to-date server images that are pre-installed and pre-configured with software and settings to match specific IT standards.
 - Features of EC2 Image Builder
 
-  - Increase productivity and reduce operations for building compliant and up-to-date images
-  - Increase service uptime
-  - Raise the security bar for deployments
+  - Greater productivity and reduce operations for building compliant and up-to-date images
+  - Greater service uptime
+  - Improved the security standard for deployments
   - Centralized enforcement and lineage tracking
   - Simplified sharing of resources across AWS accounts
 
 **How EC2 Image Builder works?**
-- When you use the EC2 Image Builder pipeline console wizard to create a custom image, a wizard guides you through the following steps.
+- When you use the EC2 Image Builder pipeline console setup to create a custom image, a wizard guides you through the following steps.
 
-  - **Specify pipeline details**: Enter information about your pipeline, such as a name, description, tags, and a schedule to run automated builds.
-  - **Choose recipe**: Choose between building an AMI, or building a container image.
-  - **Define infrastructure configuration**: Image Builder launches EC2 instances in your account to customize images and run validation tests.
-  - **Define distribution settings**: Choose the AWS Regions to distribute your image to after the build is complete and has passed all its tests
+  - **Provide pipeline details**: Enter details about your pipeline, such as a name, description, tags, and a schedule to run automated builds.
+  - **Select recipe**: Select from building an AMI, or building a container image.
+  - **Provide infrastructure configuration**: Image Builder launches EC2 instances in your account to customize images and run validation tests.
+  - **Provide distribution settings**: Select the AWS Regions to distribute your image to after the build is complete and has passed all its tests
 
 **Tutorial**
-- This tutorial walks you through creating an automated pipeline to build and maintain a customized EC2 Image Builder image using the Create image pipeline console wizard. To help you move through the steps efficiently, default settings are used when they are available, and optional sections are skipped.
-- Create image pipeline workflow
+- This tutorial walks you through creating an automated pipeline to build and maintain a customized EC2 Image Builder image using the Create image pipeline console wizard. To simplify the demo, default settings are used when they are available, and optional sections are skipped.
+- Deploy image pipeline workflow
 
-  - Step 1: Specify pipeline details
-  - Step 2: Choose recipe
-  - Step 3: Define infrastructure configuration - optional
-  - Step 4: Define distribution settings - optional
+  - Step 1: Provide pipeline details
+  - Step 2: Select recipe
+  - Step 3: Provide infrastructure configuration - optional
+  - Step 4: Provide distribution settings - optional
   - Step 5: Review
   - Step 6: Clean up
 
-  **Step 1: Specify pipeline details**
+  **Step 1: Provide pipeline details**
 
   - Traverse to the <a href="https://console.aws.amazon.com/imagebuilder/">EC2 Image Builder console</a> 
 
     <img src="images/image1.png" class="inline" width="700" height="150"/>  
 
-  - To begin creating your pipeline, choose Create image pipeline.
+  - To initiate creating your pipeline, select Create image pipeline.
 
     <img src="images/image2.png" class="inline" width="700" height="175"/>
 
-  - In the General section, enter your Pipeline name (required).
+  - In the General section, provide your Pipeline name (required).
 
     <img src="images/image3.png" class="inline" width="700" height="300"/>
 
-  - In the Build schedule section, you can keep the defaults for the Schedule options. Note that the Time zone shown for the default schedule is Universal Coordinated Time (UTC). 
+  - In the Build schedule section, you can keep the defaults for the Schedule options. Note that the Time zone is Universal Coordinated Time (UTC). 
 
     <img src="images/image4.png" class="inline" width="700" height="150"/>
 
-  - For Dependency update settings, choose the Run pipeline at the scheduled time if there are dependency updates option. This setting causes your pipeline to check for updates before starting the build. If there are no updates, it skips the scheduled pipeline build
+  - For Dependency update settings, select the Run pipeline at the scheduled time if there are dependency updates option. This setting will lead your pipeline to check for updates before starting the build. If there are no updates, it skips the scheduled pipeline build
 
     <img src="images/image5.png" class="inline" width="700" height="150"/>
 
   - Choose Next to proceed to the next step.
 
-  **Step 2: Choose recipe**
+  **Step 2: Select recipe**
   
   - Image Builder defaults to Use existing recipe in the Recipe section. Choose the Create new recipe option.
   
-  - In the Image type section, choose the Amazon Machine Image (AMI) option to create an image pipeline that will produce and distribute an AMI. 
+  - In the Image type section, select the Amazon Machine Image (AMI) option to create an image pipeline that will generate and distribute an AMI. 
     
     <img src="images/image6.png" class="inline" width="700" height="300"/>
   
@@ -117,7 +117,7 @@
    
  - Choose Next to proceed to the next step.
 
-  **Step 3: Define infrastructure configuration - optional**
+  **Step 3: Provide infrastructure configuration - optional**
   
   - Image Builder launches EC2 instances in your account to customize images and run validation tests. The Infrastructure configuration settings specify infrastructure details for the instances that will run in your AWS account during the build process.
 
@@ -129,11 +129,11 @@
    
     <img src="images/image20.png" class="inline" width="700" height="225"/>
 
-  **Step 4: Define distribution settings - optional**
+  **Step 4: Provide distribution settings - optional**
   
-  - Distribution settings include specific Region settings for encryption, launch permissions, accounts that can launch the output AMI, the output AMI name, and license configurations.
+  - Distribution settings involve specific Region configuration for encryption, launch permissions, accounts that can launch the output AMI, the output AMI name, and license configurations.
 
-  - In the Distribution settings section, the Configuration options default to Create distribution settings using service defaults. This option will distribute the output AMI to the current Region. For this tutorial, we are using the default settings.
+  - In the Distribution settings section, the Configuration options default to Create distribution settings using service defaults. This option will distribute the output AMI to the current Region.Here, we are using the default settings.
   
     <img src="images/image21.png" class="inline" width="700" height="150"/>
 
@@ -143,13 +143,13 @@
 
   **Step 5: Review**
   
-  - The Review section displays all of the settings you have configured. To edit information in any given section, choose the Edit button located in the top right corner of the step section. 
+  - The Review section displays all of the settings you have configured. To correct information in any given section, select the Edit button located in the top right corner of the step section. 
 
-  - When you have reviewed your settings, choose Create pipeline to create your pipeline.
+  - When you have verfified your configuration, select Create pipeline to create your pipeline.
 
     <img src="images/image23.png" class="inline" width="700" height="200"/>
 
-  - You can see success or failure messages at the top of the page, as your resources are created for distribution settings, infrastructure configuration, your new recipe, and the pipeline. To see details for a resource, including the resource identifier, choose View details.
+  - You can see success or failure messages at the top of the page, as your resources are deployed for distribution settings, infrastructure configuration, your new recipe, and the pipeline. To see details for a resource, including the resource identifier, choose View details.
   
     <img src="images/image24.png" class="inline" width="700" height="175"/>
     
@@ -157,4 +157,4 @@
 
   **Step 6: Clean up**
   
-  - Make sure to regularly clean up temporary resources that you created for testing. Otherwise, you might forget about those resources, and then later, not remember what they were used for.
+  - Ensure to periodically clean temporary resources that you created for testing. Otherwise, you might forget about those resources, and then later, not remember what they were used for.
