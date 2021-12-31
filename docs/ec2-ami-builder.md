@@ -155,7 +155,7 @@
 
        <img src="images/ec2/image24.png" class="inline" width="700" height="175"/>
 
-    <img src="images/ec2/image25.png" class="inline" width="700" height="175"/>
+       <img src="images/ec2/image25.png" class="inline" width="700" height="175"/>
 
    **Step 6: Clean up**
 
