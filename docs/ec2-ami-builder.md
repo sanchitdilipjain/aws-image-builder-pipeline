@@ -105,17 +105,17 @@
 
      - In the Components section, you must choose at least one build component. Under Build components – Amazon Linux panel, you can browse through the features listed on the page. For this tutorial, choose a feature that updates Linux with the latest security updates, as follows:
 
-        - Filter the results by entering the word update in the search bar located at the top of the panel.
+       - Filter the results by entering the word update in the search bar located at the top of the panel.
 
-        - Select the check box for the update-linux build component.
+       - Select the check box for the update-linux build component.
 
-          <img src="images/ec2/image16.png" class="inline" width="700" height="350"/>
+         <img src="images/ec2/image16.png" class="inline" width="700" height="350"/>
+      
+       - Scroll down, and in the upper right corner of the Selected components list, choose Expand all.
+      
+       - Keep the default for Versioning options (Use latest available component version).
 
-        - Scroll down, and in the upper right corner of the Selected components list, choose Expand all.
-
-        - Keep the default for Versioning options (Use latest available component version).
-
-           <img src="images/ec2/image18.png" class="inline" width="700" height="200"/>
+         <img src="images/ec2/image18.png" class="inline" width="700" height="200"/>
 
      - Choose Next to proceed to the next step.
 
