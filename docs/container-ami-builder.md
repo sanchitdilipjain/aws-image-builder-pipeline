@@ -1,4 +1,4 @@
-## Ec2 Image pipeline using AWS EC2 Image Builder
+## Container Image pipeline using AWS EC2 Image Builder
 
 **Introduction**
 - EC2 Image Builder is a wholly managed AWS service that simplifies the process to automate the creation, management, and deployment of tailored, secure, and up-to-date server images that are pre-installed and pre-configured with software and settings to match specific IT standards.
