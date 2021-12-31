@@ -21,7 +21,7 @@
         <img src="images/container/image17.png" class="inline" width="700" height="350"/>
 
 **Tutorial**
-- This tutorial walks you through creating an automated pipeline to build and maintain a customized EC2 Image Builder image using the Create image pipeline wizard. To simplify the demo, default settings are used when available, and optional sections are skipped.
+- This tutorial walks you through creating an automated pipeline to build and maintain a customized EC2 Image Builder Docker image using the Create image pipeline wizard. To simplify the demo, default settings are used when available, and optional sections are skipped.
 - Deploy image pipeline workflow
 
    - Step 1: Provide pipeline details
@@ -59,7 +59,7 @@
 
      - Image Builder defaults to Use existing recipe in the Recipe section. Choose the Create new recipe option.
 
-     - In the Image type section, select the Amazon Machine Image (AMI) option to create an image pipeline that will generate and distribute an AMI. 
+     - In the Image type section, select the Docker image option to create an image pipeline that will generate a Docker Image and distribute it to Amazon ECR repositories in target Regions. 
 
         <img src="images/container/image6.png" class="inline" width="700" height="300"/>
 
@@ -71,15 +71,15 @@
 
         <img src="images/container/image7.png" class="inline" width="700" height="250"/>
 
-     - Select image: You can select the base image from a list of Image Builder managed images or Amazon Machine images (AMIs) that your account has access to or import a virtual image.
+     - Select image: You can select the base image from a list of Image Builder managed images or Docker images that your account has access to.
 
         <img src="images/container/image8.png" class="inline" width="700" height="150"/>
 
-     - Choose the image to configure from a list of previously created pipeline images, images shared with you, or a quick start list to help you get started. You could also enter a custom AMI ID to define the base image. Under Image origin, select Quickstart (Amazon-managed).
+     - Image Builder supports Amazon Linux, Windows, Ubuntu, and CentOS. Under Image Operating System (OS), select Amazon Linux from the list.
 
         <img src="images/container/image9.png" class="inline" width="700" height="250"/>
 
-     - Under Image origin, select Amazon Linux from the list Amazon Linux, Windows, Ubuntu, CentOS, RHEL, and SLES.
+     - Choose the image to configure from a list of previously created pipeline images, images shared with you or a quick start list to help you get started. You could also enter a custom AMI ID to define the base image. Under Image origin, select Quick start (Amazon-managed).
 
         <img src="images/container/image12.png" class="inline" width="700" height="150"/>  
 
@@ -90,33 +90,39 @@
      - Keep the default for Auto-versioning options (Use the latest available OS version).
 
         <img src="images/container/image11.png" class="inline" width="700" height="125"/>
+     
+     - Keep the default for Instance configuration options. By default, Image Builder preselects the latest ECS optimized AMI as a base AMI for container build. In order to use your own AMI, it is recommended to ensure that the AMI has Docker pre-installed.
 
-     - Keep the default values for the Systems Manager agent. Image Builder removes the Systems Manager agent after the build and tests are complete before creating the new image.
-
-        <img src="images/container/image13.png" class="inline" width="700" height="105"/>
-
-     - Keep User data blank for this tutorial. You can use this area at other times to provide commands or a command script to run when you launch your build instance. When using it, make sure that the Systems Manager agent is pre-installed on your base image or that you include the install in your user data.
-
-        <img src="images/container/image14.png" class="inline" width="700" height="200"/>
+        <img src="images/container/image26.png" class="inline" width="700" height="400"/>
 
      - Keep the default for Working directory options (Use /tmp as Working directory path).
 
-        <img src="images/container/image15.png" class="inline" width="700" height="150"/> 
+        <img src="images/container/image13.png" class="inline" width="700" height="150"/> 
 
-     - In the Components section, you must choose at least one build component. Under Build components – Amazon Linux panel, you can browse through the features listed on the page. For this tutorial, choose a feature that updates Linux with the latest security updates, as follows:
+     - In the Components section, you must choose at least one build component. 
+     
+     - Under Build components – Amazon Linux panel, you can browse through the features listed on the page. For this tutorial, choose a feature that updates Linux with the latest security updates, as follows:
 
        - Filter the results by entering the word update in the search bar located at the top of the panel.
 
        - Select the check box for the update-linux build component.
 
-         <img src="images/container/image16.png" class="inline" width="700" height="350"/>
+         <img src="images/container/image14.png" class="inline" width="700" height="350"/>
       
        - Scroll down, and in the upper right corner of the Selected components list, choose Expand all.
       
        - Keep the default for Versioning options (Use latest available component version).
 
-         <img src="images/container/image18.png" class="inline" width="700" height="200"/>
+         <img src="images/container/image15.png" class="inline" width="700" height="200"/>
 
+     - Dockerfiles are text documents that are used to build Docker containers, and ensure that they contain all of the elements required by the application running inside. The template data consists of contextual variables where Image Builder places build information or scripts, based on your container image recipe.
+     
+         <img src="images/container/image16.png" class="inline" width="700" height="200"/>
+
+     - Under the Target repository section, click on the hyperlink to create new Amazon ECR repository, and provide the name of the repository once it is created.
+
+         <img src="images/container/image18.png" class="inline" width="700" height="200"/>
+     
      - Choose Next to proceed to the next step.
 
    **Step 3: Provide infrastructure configuration - optional**
@@ -153,7 +159,7 @@
 
      - You can see success or failure messages at the top of the page, as your resources are deployed for distribution settings, infrastructure configuration, your new recipe, and the pipeline. To see details for a resource, including the resource identifier, choose View details.
 
-       <img src="images/container/image24.png" class="inline" width="700" height="175"/>
+       <img src="images/container/image24.png" class="inline" width="700" height="150"/>
 
        <img src="images/container/image25.png" class="inline" width="700" height="175"/>
 
