@@ -75,11 +75,11 @@
 
         <img src="images/ec2/image8.png" class="inline" width="700" height="150"/>
 
-     - Choose the image to configure from a list of previously created pipeline images, images shared with you, or a quick start list to help you get started. You could also enter a custom AMI ID to define the base image. Under Image origin, select Quickstart (Amazon-managed).
+     - Image Builder supports Amazon Linux, Windows, Ubuntu, CentOS, RHEL, and SLES. Under Image Operating System (OS), select Amazon Linux from the list.
 
         <img src="images/ec2/image9.png" class="inline" width="700" height="250"/>
 
-     - Under Image origin, select Amazon Linux from the list Amazon Linux, Windows, Ubuntu, CentOS, RHEL, and SLES.
+     - Choose the image to configure from a list of previously created pipeline images, images shared with you or a quick start list to help you get started. You could also enter a custom AMI ID to define the base image. Under Image origin, select Quick start (Amazon-managed).
 
         <img src="images/ec2/image12.png" class="inline" width="700" height="150"/>  
 
