@@ -1,3 +1,9 @@
+---
+layout: default
+date: 2021-12-31
+title: Ec2 Image pipeline using AWS EC2 Image Builder
+---
+
 ## Ec2 Image pipeline using AWS EC2 Image Builder
 
 **Introduction**
