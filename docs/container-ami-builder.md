@@ -1,3 +1,9 @@
+---
+layout: default
+date: 2022-01-01
+title: Container Image pipeline using AWS EC2 Image Builder
+---
+
 ## Container Image pipeline using AWS EC2 Image Builder
 
 **Introduction**
